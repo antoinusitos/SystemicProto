@@ -6,6 +6,8 @@ public enum SystemicMaterial
     GRASS,
     ICE,
     WATER,
+    IRON,
+
 }
 
 public enum SystemicElement
@@ -14,7 +16,7 @@ public enum SystemicElement
     FIRE,
     WIND,
     COLD,
-
+    ELECTRICITY,
 }
 
 public enum ElementSize

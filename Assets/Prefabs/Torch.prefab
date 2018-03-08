@@ -57,8 +57,6 @@ GameObject:
   - component: {fileID: 65872806675810840}
   - component: {fileID: 114912718742033902}
   - component: {fileID: 114490849898738530}
-  - component: {fileID: 114615270868889416}
-  - component: {fileID: 114247434841771614}
   - component: {fileID: 114035346629564650}
   m_Layer: 0
   m_Name: Torch
@@ -286,18 +284,6 @@ MonoBehaviour:
   particles:
   - {fileID: 198459017367872388}
   - {fileID: 198418696712293226}
---- !u!114 &114247434841771614
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1770547890120522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b967207965c20543b3212b08a26c883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toDebug: LIGHT !
 --- !u!114 &114490849898738530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,17 +314,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 114247434841771614}
-          m_MethodName: Execute
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 114035346629564650}
           m_MethodName: Execute
           m_Mode: 6
@@ -360,17 +335,6 @@ MonoBehaviour:
         - m_Target: {fileID: 1931214797422244}
           m_MethodName: SetActive
           m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 114247434841771614}
-          m_MethodName: Execute
-          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -432,18 +396,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
---- !u!114 &114615270868889416
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1770547890120522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b967207965c20543b3212b08a26c883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toDebug: EXTINGUISH !
 --- !u!114 &114912718742033902
 MonoBehaviour:
   m_ObjectHideFlags: 1
