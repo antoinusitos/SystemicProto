@@ -12,6 +12,9 @@ public class Nature : MonoBehaviour
 
     public MaterialReaction[] reactions = null;
 
+    public bool useTriggerStay = true;
+    public bool useTriggerEnter = false;
+
     public void ReactToElement(SystemicElement type, ElementSize size)
     {
         for (int i = 0; i < reactions.Length; i++)
@@ -24,8 +27,21 @@ public class Nature : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!useTriggerEnter) return;
+
+        Element elem = other.GetComponentInParent<Element>();
+        if (elem != null)
+        {
+            ReactToElement(elem.elementType, elem.elementSize);
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
+        if (!useTriggerStay) return;
+
         Element elem = other.GetComponentInParent<Element>();
         if (elem != null)
         {

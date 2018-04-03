@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 1.0f;
 
+    private bool _slip = false;
+
 	void Update ()
     {
         float vertical = Input.GetAxis("Vertical");
@@ -25,5 +27,10 @@ public class PlayerMovement : MonoBehaviour
             fw.y = 0;
             transform.position += horizontal * fw * speed * Time.deltaTime;
         }
+    }
+
+    public void SetSlip(bool newState)
+    {
+        _slip = newState;
     }
 }

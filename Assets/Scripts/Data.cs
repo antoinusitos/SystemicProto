@@ -1,4 +1,5 @@
-﻿using UnityEngine.Events;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public enum SystemicMaterial
 {
@@ -7,7 +8,8 @@ public enum SystemicMaterial
     ICE,
     WATER,
     IRON,
-
+    ROCK,
+    SKIN,
 }
 
 public enum SystemicElement
@@ -17,6 +19,7 @@ public enum SystemicElement
     WIND,
     COLD,
     ELECTRICITY,
+    SUN,
 }
 
 public enum ElementSize
@@ -43,6 +46,13 @@ public struct ElementReaction
     public SystemicElement theElement;
     public ElementSize theSize;
     public UnityEvent actions;
+}
+
+[System.Serializable]
+public struct StringObject
+{
+    public string name;
+    public GameObject theObject;
 }
 
 public static class Data
